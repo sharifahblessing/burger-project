@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Wrap from '../../hoc/Wrap';
-import classes from './Layout.css'
+import classes from './Layout.module.css'
 
 
 const layout = (props)=> (

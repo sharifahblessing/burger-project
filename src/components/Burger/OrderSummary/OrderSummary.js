@@ -1,5 +1,7 @@
 import React from 'react';
-import Wrap from '../../../hoc/Wrap'
+import Wrap from '../../../hoc/Wrap';
+
+import Button from '../../UI/Button/Button'
 
 const orderSummary = (props) => {
 
@@ -16,6 +18,8 @@ const orderSummary = (props) => {
                 {ingredientSummary}
             </ul>
             <p>Continue to Checkout?</p>
+            <Button btnType='Danger' clicked={props.purchaseCanceled}>CANCEL</Button>
+            <Button btnType='Success' clicked={props.purchaseContinued}>CONTINUE</Button>
         </Wrap>
     )
 }

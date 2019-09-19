@@ -1,11 +1,12 @@
 .Burger{
     width:100%;
-    margin:auto;
+    margin: auto;
     height:250px;
     overflow:scroll;
     text-align: center;
     font-weight:bold;
     font-size:1.2rem;
+    margin-top:55px
 
 }
 

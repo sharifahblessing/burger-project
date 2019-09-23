@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import Wrap from '../../hoc/Wrap';
-import Toolbar from "../Navigation/Toolbar/Toolbar";
-import SideDrawer from '../Navigation/sideDrawer/sideDrawer';
+import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
+import SideDrawer from '../../components/Navigation/sideDrawer/sideDrawer';
 
 import classes from './Layout.module.css'
 

@@ -18,11 +18,7 @@ const INGREDIENT_PRICES = {
 class BurgerBuilder extends Component {
 
     state = {
-        ingredients: {
-            salad: 0,
-            meat: 0,
-            cheese: 0,
-        },
+        ingredients:null,
         totalPrice: 4,
         purchasable: false,
         purchasing: false,
@@ -32,7 +28,7 @@ class BurgerBuilder extends Component {
     }
 
     componentDidMount () {
-        axios.get( 'https://react-my-burger.firebaseio.com/ingredients.json' )
+        axios.get( 'https://burger-react-project-ce231.firebaseio.com//ingredients.json' )
             .then( response => {
                 this.setState( { ingredients: response.data } );
             } )
@@ -186,4 +182,4 @@ class BurgerBuilder extends Component {
     }
 }
 
-export default WithErrorHandler(BurgerBuilder);
+export default WithErrorHandler(BurgerBuilder,axios);

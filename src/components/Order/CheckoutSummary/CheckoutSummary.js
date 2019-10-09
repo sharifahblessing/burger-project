@@ -5,14 +5,18 @@ import classes from './CheckoutSummary.module.css'
 
 const checkoutSummary = (props) => {
     return (
-    <div className={classes.CheckoutSummary}>
-        <h1>Hope it tastes well!</h1>
-        <div style={{ width: '100%', margin: 'auto' }}>
-            <Burger ingredients={props.ingredients} />
-        </div>
-        <Button btnType='Danger' clicked={props.purchaseCancelled}>CANCEL</Button>
-        <Button btnType='Success' clicked={props.purchaseContinued}>CONTINUE</Button>
-    </div>);
+        <div className={classes.CheckoutSummary}>
+            <h1>Hope it tastes well!</h1>
+            <div style={{ width: '100%', margin: 'auto' }}>
+                <Burger ingredients={props.ingredients} />
+            </div>
+            <Button
+                btnType='Danger'
+                clicked={props.checkoutCancelled}>CANCEL</Button>
+            <Button
+                btnType='Success'
+                clicked={props.checkoutContinued}>CONTINUE</Button>
+        </div>);
 
 }
 

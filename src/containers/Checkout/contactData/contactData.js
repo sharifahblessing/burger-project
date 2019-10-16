@@ -2,20 +2,22 @@ import React , {Component} from 'react';
 import Button from '../../../components/UI/Button/Button'
 import axios  from '../../../axios-orders'
 import Spinner from '../../../components/UI/spinner/spinner'
+import Input  from '../../../components/UI/Input/Input'
 
 import classes from './contactData.module.css'
 
 class ContactData  extends Component  {
     state = {
-        name: '',
-        email: '',
-        loading:false,
-        address: {
-            street: '',
-            postalCode: ''
-        }
+        orderForm: {
+            name: 'Maria Campbell',
+            street: 'Test Street 1',
+            zipCode: '56225',
+            country: 'USA',
+            email: 'test@test.com',
+            deliveryMethod: 'fastest'
+        },
+        loading: false
     }
-
     orderHandler =(event)=>{
         event.preventDefault();
         this.setState({
@@ -49,10 +51,10 @@ class ContactData  extends Component  {
     render () {
         let form = (
             <form>
-                <input className={classes.Input} type="text" name="name" placeholder="Your Name"/>
-                <input className={classes.Input} type="email" name="email" placeholder="Your Email"/>
-                <input className={classes.Input} type="text" name="street" placeholder="Your Street Address"/>
-                <input className={classes.Input} type="text" name="postal" placeholder="Your Postal Code"/>
+                <Input  inputtype="input" name="name" placeholder="Your Name"/>
+                <Input  inputtype="input" name="email" placeholder="Your Email"/>
+                <Input  inputtype="input" name="street" placeholder="Your Street Address"/>
+                <Input  inputtype="input" name="postal" placeholder="Your Postal Code"/>
                 <Button clicked={this.orderHandler} btnType="Success">ORDER</Button>
             </form>
         );

@@ -14,10 +14,15 @@
     font:inherit;
     padding: 6px 10px;
     font:inherit;
+    width:100%;
     border: 1px solid #ccc
 
 }
 .InputElement:focus{
     outline:none;
     background-color: #ccc
+}
+.Invalid {
+    border: 1px solid red;
+    background-color: #FDA49A;
 }
